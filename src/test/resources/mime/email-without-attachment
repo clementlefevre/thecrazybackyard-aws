@@ -1,0 +1,37 @@
+Return-Path: <axel@fake.com>
+Received: from mail-io0-f174.google.com (mail-io0-f174.google.com [209.85.223.174])
+ by inbound-smtp.us-east-1.amazonaws.com with SMTP id o1882sk1sfr94njra67is25cde5d7uiim0mbt001
+ for cb@thecrazybackyard.com;
+ Tue, 04 Sep 2018 21:01:32 +0000 (UTC)
+X-SES-Spam-Verdict: PASS
+X-SES-Virus-Verdict: PASS
+Received-SPF: pass (spfCheck: domain of _spf.google.com designates 209.85.223.174 as permitted sender) client-ip=123.123.123.123; envelope-from=axel@fake2.com; helo=mail-io0-f174.google.com;
+Authentication-Results: amazonses.com;
+ spf=pass (spfCheck: domain of _spf.google.com designates 209.85.223.174 as permitted sender) client-ip=209.85.223.174; envelope-from=axel@fake2.com; helo=mail-io0-f174.google.com;
+ dmarc=none header.from=bockig.com;
+Received: by mail-io0-f174.google.com with SMTP id c22-v6so4236914iob.1
+        for <cb@thecrazybackyard.com>; Tue, 04 Sep 2018 14:01:32 -0700 (PDT)
+X-Gm-Message-State: APzg51CH4iKhtuo2/uV1nx/AjwHrmpOsIZLykyC8lQij9AEJy/gNr6ym
+	2TC7qbgQplY+TB8NSu5+Z6A1yCYKTRNX17PDuhmUig==
+X-Google-Smtp-Source: ANB0VdYrNSWAb4ABWC7RHhK4RcQ039rFFD8sN/37E+gS8HkeHILZxYJMGMp9t9unRuIDgypY+LLDqgKp6xtlhwGV5+A=
+X-Received: by 2002:a6b:a683:: with SMTP id p125-v6mr23395412ioe.172.1536094891780;
+ Tue, 04 Sep 2018 14:01:31 -0700 (PDT)
+MIME-Version: 1.0
+From: Axel Bock <axel@fake.com>
+Date: Tue, 4 Sep 2018 23:01:00 +0200
+Message-ID: <egal@mail.gmail.com>
+Subject: test e-mail
+To: cb@ivb-online.com
+Content-Type: multipart/alternative; boundary="0000000000005db42e057511f6b6"
+
+--0000000000005db42e057511f6b6
+Content-Type: text/plain; charset="UTF-8"
+
+huhu
+
+--0000000000005db42e057511f6b6
+Content-Type: text/html; charset="UTF-8"
+
+<div dir="ltr">huhu</div>
+
+--0000000000005db42e057511f6b6--
