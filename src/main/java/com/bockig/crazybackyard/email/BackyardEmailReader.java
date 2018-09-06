@@ -2,15 +2,17 @@ package com.bockig.crazybackyard.email;
 
 import org.apache.commons.mail.util.MimeMessageParser;
 
+import javax.mail.BodyPart;
 import javax.mail.MessagingException;
 import javax.mail.Session;
 import javax.mail.internet.MimeMessage;
+import javax.mail.internet.MimeMultipart;
 import java.io.InputStream;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.Enumeration;
-import java.util.Optional;
-import java.util.Properties;
+import java.util.*;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 class BackyardEmailReader {
 
@@ -40,12 +42,38 @@ class BackyardEmailReader {
         return message.getSubject();
     }
 
+    List<Image> images() throws Exception {
+        String contentType = message.getMimeMessage().getContentType();
+        if (contentType.startsWith(MULTIPART_MIXED)) {
+            MimeMultipart mimeMultipart = (MimeMultipart) message.getMimeMessage().getContent();
+            return IntStream.range(0, mimeMultipart.getCount())
+                    .mapToObj(i -> bodyPart(i, mimeMultipart))
+                    .filter(Optional::isPresent)
+                    .map(Optional::get)
+                    .filter(Image::isImage)
+                    .map(Image::fromBodyPart)
+                    .filter(Optional::isPresent)
+                    .map(Optional::get)
+                    .collect(Collectors.toList());
+        }
+        return new ArrayList<>();
+    }
+
+    private Optional<BodyPart> bodyPart(Integer i, MimeMultipart mimeMultipart) {
+        try {
+            return Optional.of(mimeMultipart.getBodyPart(i));
+        } catch (MessagingException e) {
+            e.printStackTrace();
+            return Optional.empty();
+        }
+    }
+
     Optional<ZonedDateTime> timestamp() throws Exception {
         Enumeration h = message.getMimeMessage().getAllHeaders();
         String[] date = message.getMimeMessage().getHeader("Date");
         ZonedDateTime timestamp = null;
         if (date.length > 0) {
-            timestamp = ZonedDateTime.parse(date[0], DateTimeFormatter.RFC_1123_DATE_TIME);
+            timestamp = ZonedDateTime.parse(date[0].replaceAll("  ", ""), DateTimeFormatter.RFC_1123_DATE_TIME);
         }
         return Optional.ofNullable(timestamp);
     }
