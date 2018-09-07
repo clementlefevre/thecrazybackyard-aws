@@ -6,12 +6,18 @@ import com.amazonaws.services.lambda.runtime.events.S3Event;
 import com.amazonaws.services.s3.AmazonS3;
 import com.amazonaws.services.s3.AmazonS3ClientBuilder;
 import com.amazonaws.services.s3.event.S3EventNotification;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.net.URLDecoder;
 
 public class S3CreatedRequestHandler implements RequestHandler<S3Event, String> {
 
+    private static final Logger LOG = LogManager.getLogger(S3CreatedRequestHandler.class);
+
     public String handleRequest(S3Event s3event, Context context) {
+
+        LOG.info("moin!!");
         try {
             S3EventNotification.S3EventNotificationRecord record = s3event.getRecords().get(0);
 
@@ -24,10 +30,10 @@ public class S3CreatedRequestHandler implements RequestHandler<S3Event, String> 
             // Read the source file as text
             AmazonS3 s3Client = AmazonS3ClientBuilder.defaultClient();
             String body = s3Client.getObjectAsString(bkt, key);
-            System.out.println("Body: " + body);
+            LOG.info("Body: {}", body);
             return "ok";
         } catch (Exception e) {
-            System.err.println("Exception: " + e);
+            LOG.error("error in handler", e);
             return "error";
         }
     }

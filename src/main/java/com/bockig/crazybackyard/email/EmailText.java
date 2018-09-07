@@ -1,6 +1,8 @@
 package com.bockig.crazybackyard.email;
 
 import org.apache.commons.lang3.StringUtils;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import javax.mail.BodyPart;
 import javax.mail.MessagingException;
@@ -14,6 +16,8 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 class EmailText {
+
+    private static final Logger LOG = LogManager.getLogger(EmailText.class);
 
     private static final String TEXT_PLAIN = "text/plain";
     private static DateTimeFormatter DATE_FORMAT = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
@@ -34,7 +38,7 @@ class EmailText {
         try {
             return Optional.of(new EmailText((String) bodyPart.getContent()));
         } catch (MessagingException | IOException e) {
-            e.printStackTrace();
+            LOG.error("cannot create text from BodyPart", e);
         }
         return Optional.empty();
     }
@@ -43,7 +47,7 @@ class EmailText {
         try {
             return bodyPart.getContentType().startsWith(TEXT_PLAIN);
         } catch (MessagingException e) {
-            e.printStackTrace();
+            LOG.error("check test if text", e);
             return false;
         }
     }

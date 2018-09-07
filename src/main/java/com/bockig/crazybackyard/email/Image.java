@@ -2,6 +2,8 @@ package com.bockig.crazybackyard.email;
 
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang3.StringUtils;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import javax.mail.BodyPart;
 import javax.mail.MessagingException;
@@ -10,6 +12,8 @@ import java.io.InputStream;
 import java.util.Optional;
 
 class Image {
+
+    private static final Logger LOG = LogManager.getLogger(Image.class);
 
     private static final String JPG_SUFFIX = ".jpg";
 
@@ -31,7 +35,7 @@ class Image {
             String filename = bodyPart.getFileName();
             return Optional.of(new Image(filename, bytes));
         } catch (MessagingException | IOException e) {
-            e.printStackTrace();
+            LOG.error("cannot create image from BodyPart", e);
         }
         return Optional.empty();
     }
@@ -41,12 +45,12 @@ class Image {
             String filename = bodyPart.getFileName();
             return StringUtils.isNotBlank(filename) && filename.toLowerCase().endsWith(JPG_SUFFIX);
         } catch (MessagingException e) {
-            e.printStackTrace();
+            LOG.error("check test if image", e);
             return false;
         }
     }
 
-    public String getFilename() {
+    String getFilename() {
         return filename;
     }
 }

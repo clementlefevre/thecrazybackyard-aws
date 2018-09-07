@@ -1,6 +1,8 @@
 package com.bockig.crazybackyard.email;
 
 import org.apache.commons.mail.util.MimeMessageParser;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import javax.mail.BodyPart;
 import javax.mail.MessagingException;
@@ -16,6 +18,8 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 class BackyardEmailReader {
+
+    private static final Logger LOG = LogManager.getLogger(BackyardEmailReader.class);
 
     private static final String MULTIPART_MIXED = "multipart/mixed";
     private static final String MULTIPART_ALTERNATIVE = "multipart/alternative";
@@ -33,7 +37,7 @@ class BackyardEmailReader {
             MimeMessage message = new MimeMessage(mailSession, source);
             return Optional.of(new BackyardEmailReader(new MimeMessageParser(message)));
         } catch (MessagingException e) {
-            e.printStackTrace();
+            LOG.error("cant create reader", e);
         }
         return Optional.empty();
     }
@@ -78,7 +82,7 @@ class BackyardEmailReader {
             }
             return new ArrayList<>();
         } catch (MessagingException | IOException e) {
-            e.printStackTrace();
+            LOG.error("cant create texts", e);
             return Collections.emptyList();
         }
     }
@@ -87,7 +91,7 @@ class BackyardEmailReader {
         try {
             return Optional.of(mimeMultipart.getBodyPart(i));
         } catch (MessagingException e) {
-            e.printStackTrace();
+            LOG.error("cant create bodypart", e);
             return Optional.empty();
         }
     }
@@ -109,7 +113,7 @@ class BackyardEmailReader {
             }
             return Optional.ofNullable(timestamp);
         } catch (MessagingException e) {
-            e.printStackTrace();
+            LOG.error("cant parse timestamp", e);
             return Optional.empty();
         }
     }
