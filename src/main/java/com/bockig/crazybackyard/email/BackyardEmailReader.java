@@ -42,12 +42,22 @@ class BackyardEmailReader {
         return Optional.empty();
     }
 
-    String sender() throws Exception {
-        return message.getFrom();
+    String sender() {
+        try {
+            return message.getFrom();
+        } catch (Exception e) {
+            LOG.error(e);
+            return "";
+        }
     }
 
-    String subject() throws Exception {
-        return message.getSubject();
+    String subject() {
+        try {
+            return message.getSubject();
+        } catch (Exception e) {
+            LOG.error(e);
+            return "";
+        }
     }
 
     List<Image> images() throws Exception {
@@ -124,5 +134,13 @@ class BackyardEmailReader {
                 .filter(Optional::isPresent)
                 .map(Optional::get)
                 .findAny();
+    }
+
+    Map<String, String> metaData() {
+        Map<String, String> meta = new HashMap<>();
+        meta.put("utc", String.valueOf(timestamp().flatMap(t -> Optional.of(t.toEpochSecond())).orElse(0L)));
+        meta.put("from", sender());
+        meta.put("subject", subject());
+        return meta;
     }
 }

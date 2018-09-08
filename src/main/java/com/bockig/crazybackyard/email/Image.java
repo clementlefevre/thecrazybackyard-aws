@@ -7,6 +7,7 @@ import org.apache.logging.log4j.Logger;
 
 import javax.mail.BodyPart;
 import javax.mail.MessagingException;
+import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Optional;
@@ -52,5 +53,9 @@ class Image {
 
     String getFilename() {
         return filename;
+    }
+
+    InputStream inputStream() {
+        return new ByteArrayInputStream(bytes);
     }
 }
