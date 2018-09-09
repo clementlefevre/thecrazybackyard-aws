@@ -1,4 +1,4 @@
-package com.bockig.crazybackyard.email;
+package com.bockig.crazybackyard.model;
 
 import org.apache.commons.mail.util.MimeMessageParser;
 import org.apache.logging.log4j.LogManager;
@@ -17,7 +17,7 @@ import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
-class BackyardEmailReader {
+public class BackyardEmailReader {
 
     private static final Logger LOG = LogManager.getLogger(BackyardEmailReader.class);
 
@@ -30,7 +30,7 @@ class BackyardEmailReader {
         this.message = message;
     }
 
-    static Optional<BackyardEmailReader> create(InputStream source) {
+    public static Optional<BackyardEmailReader> create(InputStream source) {
         Properties props = new Properties();
         Session mailSession = Session.getDefaultInstance(props, null);
         try {
@@ -42,7 +42,7 @@ class BackyardEmailReader {
         return Optional.empty();
     }
 
-    String sender() {
+    public String sender() {
         try {
             return message.getFrom();
         } catch (Exception e) {
@@ -51,7 +51,7 @@ class BackyardEmailReader {
         }
     }
 
-    String subject() {
+    public String subject() {
         try {
             return message.getSubject();
         } catch (Exception e) {
@@ -60,7 +60,7 @@ class BackyardEmailReader {
         }
     }
 
-    List<Image> images() throws Exception {
+    public List<Image> images() throws Exception {
         String contentType = message.getMimeMessage().getContentType();
         if (contentType.startsWith(MULTIPART_MIXED)) {
             MimeMultipart mimeMultipart = (MimeMultipart) message.getMimeMessage().getContent();
@@ -106,7 +106,7 @@ class BackyardEmailReader {
         }
     }
 
-    Optional<ZonedDateTime> timestamp() {
+    public Optional<ZonedDateTime> timestamp() {
         Optional<ZonedDateTime> fromText = timestampFromText();
         if (fromText.isPresent()) {
             return fromText;
@@ -136,11 +136,11 @@ class BackyardEmailReader {
                 .findAny();
     }
 
-    Map<String, String> metaData() {
+    public Map<String, String> metaData() {
         Map<String, String> meta = new HashMap<>();
-        meta.put("utc", String.valueOf(timestamp().flatMap(t -> Optional.of(t.toEpochSecond())).orElse(0L)));
-        meta.put("from", sender());
-        meta.put("subject", subject());
+        meta.put(MetaData.UTC, String.valueOf(timestamp().flatMap(t -> Optional.of(t.toEpochSecond())).orElse(0L)));
+        meta.put(MetaData.FROM, sender());
+        meta.put(MetaData.SUBJECT, subject());
         return meta;
     }
 }

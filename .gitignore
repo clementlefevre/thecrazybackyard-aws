@@ -2,3 +2,4 @@
 /*.idea
 *.iml
 dependency-reduced-pom.xml
+twitter4j.properties

@@ -1,4 +1,4 @@
-package com.bockig.crazybackyard.email;
+package com.bockig.crazybackyard.model;
 
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang3.StringUtils;
@@ -12,7 +12,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Optional;
 
-class Image {
+public class Image {
 
     private static final Logger LOG = LogManager.getLogger(Image.class);
 
@@ -51,11 +51,11 @@ class Image {
         }
     }
 
-    String getFilename() {
+    public String getFilename() {
         return filename;
     }
 
-    InputStream inputStream() {
+    public InputStream inputStream() {
         return new ByteArrayInputStream(bytes);
     }
 }

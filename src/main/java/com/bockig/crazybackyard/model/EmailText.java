@@ -1,4 +1,4 @@
-package com.bockig.crazybackyard.email;
+package com.bockig.crazybackyard.model;
 
 import org.apache.commons.lang3.StringUtils;
 import org.apache.logging.log4j.LogManager;

@@ -1,4 +1,4 @@
-package com.bockig.crazybackyard.email;
+package com.bockig.crazybackyard.model;
 
 import com.amazonaws.services.s3.event.S3EventNotification;
 import org.apache.logging.log4j.LogManager;
@@ -8,14 +8,14 @@ import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
 import java.util.List;
 
-class S3Util {
+public class S3Util {
 
     private static final Logger LOG = LogManager.getLogger(S3Util.class);
 
     private S3Util() {
     }
 
-    static String readKey(S3EventNotification.S3EventNotificationRecord record) {
+    public static String readKey(S3EventNotification.S3EventNotificationRecord record) {
         String key = record.getS3().getObject().getKey().replace('+', ' ');
         try {
             return URLDecoder.decode(key, "UTF-8");
@@ -25,7 +25,7 @@ class S3Util {
         }
     }
 
-    static void logRecords(List<S3EventNotification.S3EventNotificationRecord> records) {
+    public static void logRecords(List<S3EventNotification.S3EventNotificationRecord> records) {
         records.forEach(r -> LOG.info("found record: {}, {}, {}", r.getEventName(), r.getS3().getBucket(), r.getS3().getObject().getKey()));
     }
 }

@@ -1,5 +1,7 @@
-package com.bockig.crazybackyard.email;
+package com.bockig.crazybackyard;
 
+import com.bockig.crazybackyard.model.BackyardEmailReader;
+import com.bockig.crazybackyard.model.Image;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -41,7 +43,8 @@ public class BackyardEmailReaderTest {
             Assert.assertTrue(timestamp.isEqual(readerObj.timestamp().get()));
             List<Image> images = readerObj.images();
             Assert.assertEquals(1, images.size());
-            Assert.assertEquals("SYEW0124.JPG", images.get(0).getFilename());        }
+            Assert.assertEquals("SYEW0124.JPG", images.get(0).getFilename());
+        }
     }
 
     @Test
