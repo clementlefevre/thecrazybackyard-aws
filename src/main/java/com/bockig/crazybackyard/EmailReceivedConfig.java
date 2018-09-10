@@ -1,26 +1,25 @@
 package com.bockig.crazybackyard;
 
-public class EmailReceivedConfig {
+import com.bockig.crazybackyard.model.Config;
+import com.bockig.crazybackyard.model.SystemProperty;
+
+import java.util.ArrayList;
+import java.util.List;
+
+class EmailReceivedConfig extends Config {
+
     private static final String TARGET_BUCKET = "CRAZYBACKYARD_S3_TARGET_BUCKET";
 
-    private String targetBucket;
-
-    private EmailReceivedConfig(String targetBucket) {
-        this.targetBucket = targetBucket;
-        failIfIncomplete();
+    EmailReceivedConfig(List<SystemProperty> properties) {
+        super(properties);
     }
 
-    private void failIfIncomplete() {
-        if (targetBucket == null) {
-            throw new RuntimeException("missing variable: " + TARGET_BUCKET);
-        }
+    static EmailReceivedConfig load() {
+        return new EmailReceivedConfig(new ArrayList<>(SystemProperty.create(TARGET_BUCKET)));
     }
 
-    public static EmailReceivedConfig load() {
-        return new EmailReceivedConfig(System.getenv(TARGET_BUCKET));
+    String getTargetBucket() {
+        return propertyValue(TARGET_BUCKET);
     }
 
-    public String getTargetBucket() {
-        return targetBucket;
-    }
 }
