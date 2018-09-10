@@ -1,2 +1,2 @@
-# thecrazybackyard-email
-Java 8 app for extracting pictures and metadata from s3 e-mail for https://twitter.com/crazybackyard
+# thecrazybackyard-aws
+This small projects utilizes AWS services to create a serverless application that publishes captured images from a trail camera live to twitter.  https://twitter.com/crazybackyard
