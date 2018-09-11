@@ -1,4 +1,4 @@
-package com.bockig.crazybackyard;
+package com.bockig.crazybackyard.model;
 
 import com.bockig.crazybackyard.model.BackyardEmailReader;
 import com.bockig.crazybackyard.model.Image;

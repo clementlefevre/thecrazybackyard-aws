@@ -106,7 +106,7 @@ public class BackyardEmailReader {
         }
     }
 
-    public Optional<ZonedDateTime> timestamp() {
+    Optional<ZonedDateTime> timestamp() {
         Optional<ZonedDateTime> fromText = timestampFromText();
         if (fromText.isPresent()) {
             return fromText;

@@ -18,8 +18,8 @@ public class TweetTest {
     public void test() throws Exception {
         Twitter twitter = TwitterFactory.getSingleton();
         File f = new File("D:\\downloads\\SYEW0148.JPG");
-        StatusUpdate statuss = new StatusUpdate("test pic");
         try (InputStream fis = new FileInputStream(f)) {
+            StatusUpdate statuss = new StatusUpdate("test pic");
             statuss.setMedia("SYEW0148.JPG", fis);
             Status status = twitter.updateStatus(statuss);
             System.out.println("Successfully updated the status to [" + status.getText() + "].");

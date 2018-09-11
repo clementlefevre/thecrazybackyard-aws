@@ -21,5 +21,4 @@ class EmailReceivedConfig extends Config {
     String getTargetBucket() {
         return propertyValue(TARGET_BUCKET);
     }
-
 }

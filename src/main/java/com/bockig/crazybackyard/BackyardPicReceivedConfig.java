@@ -2,6 +2,8 @@ package com.bockig.crazybackyard;
 
 import com.bockig.crazybackyard.model.Config;
 import com.bockig.crazybackyard.model.SystemProperty;
+import twitter4j.conf.Configuration;
+import twitter4j.conf.ConfigurationBuilder;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,8 +19,16 @@ public class BackyardPicReceivedConfig extends Config {
         super(properties);
     }
 
-    public static BackyardPicReceivedConfig load() {
+    static BackyardPicReceivedConfig load() {
         return new BackyardPicReceivedConfig(new ArrayList<>(SystemProperty.create(CONSUMER_KEY, CONSUMER_SECRET, ACCESS_TOKEN, ACCESS_SECRET)));
     }
 
+    Configuration twitterConfig() {
+        ConfigurationBuilder cb = new ConfigurationBuilder()
+                .setOAuthConsumerKey(propertyValue(CONSUMER_KEY))
+                .setOAuthConsumerSecret(propertyValue(CONSUMER_SECRET))
+                .setOAuthAccessToken(propertyValue(ACCESS_TOKEN))
+                .setOAuthAccessTokenSecret(propertyValue(ACCESS_SECRET));
+        return cb.build();
+    }
 }
