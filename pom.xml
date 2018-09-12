@@ -4,7 +4,7 @@
     <groupId>com.bockig</groupId>
     <artifactId>thecrazybackyard-aws</artifactId>
     <packaging>jar</packaging>
-    <version>1.0</version>
+    <version>1.1-SNAPSHOT</version>
     <name>thecrazybackyard-aws</name>
 
     <properties>
@@ -117,6 +117,6 @@
         <url>https://github.com/axlsml/thecrazybackyard-aws</url>
         <connection>scm:git:git://github.com/axlsml/thecrazybackyard-aws.git</connection>
         <developerConnection>scm:git:git@github.com:axlsml/thecrazybackyard-aws.git</developerConnection>
-      <tag>1.0</tag>
+      <tag>HEAD</tag>
   </scm>
 </project>
