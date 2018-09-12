@@ -31,14 +31,14 @@
         <y:ProxyAutoBoundsNode>
           <y:Realizers active="0">
             <y:GroupNode>
-              <y:Geometry height="391.45816791875006" width="1106.3145440075004" x="992.3045126324996" y="-59.458167918750064"/>
+              <y:Geometry height="391.45816791875006" width="1045.3145440075004" x="992.3045126324996" y="-59.458167918750064"/>
               <y:Fill color="#F5F5F5" transparent="false"/>
               <y:BorderStyle color="#000000" type="dashed" width="1.0"/>
-              <y:NodeLabel alignment="right" autoSizePolicy="node_width" backgroundColor="#EBEBEB" borderDistance="0.0" fontFamily="Dialog" fontSize="15" fontStyle="plain" hasLineColor="false" height="22.37646484375" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="t" textColor="#000000" verticalTextPosition="bottom" visible="true" width="1106.3145440075004" x="0.0" y="0.0">AWS</y:NodeLabel>
+              <y:NodeLabel alignment="right" autoSizePolicy="node_width" backgroundColor="#EBEBEB" borderDistance="0.0" fontFamily="Dialog" fontSize="15" fontStyle="plain" hasLineColor="false" height="22.37646484375" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="t" textColor="#000000" verticalTextPosition="bottom" visible="true" width="1045.3145440075004" x="0.0" y="0.0">AWS</y:NodeLabel>
               <y:Shape type="roundrectangle"/>
               <y:State closed="false" closedHeight="50.0" closedWidth="50.0" innerGraphDisplayEnabled="false"/>
               <y:Insets bottom="15" bottomF="15.0" left="15" leftF="15.0" right="15" rightF="15.0" top="15" topF="15.0"/>
-              <y:BorderInsets bottom="0" bottomF="0.0" left="0" leftF="0.0" right="0" rightF="0.0" top="0" topF="0.0"/>
+              <y:BorderInsets bottom="0" bottomF="0.0" left="0" leftF="0.0" right="13" rightF="13.024211199999627" top="0" topF="0.0"/>
             </y:GroupNode>
             <y:GroupNode>
               <y:Geometry height="50.0" width="50.0" x="0.0" y="60.0"/>
@@ -74,6 +74,7 @@
               <y:Geometry height="60.0" width="60.0" x="1410.87301888" y="158.61946879999994"/>
               <y:Fill color="#CCCCFF" transparent="false"/>
               <y:BorderStyle color="#000000" type="line" width="1.0"/>
+              <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" hasText="false" height="4.0" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" width="4.0" x="28.0" y="28.0"/>
               <y:SVGNodeProperties usingVisualBounds="true"/>
               <y:SVGModel svgBoundsPolicy="0">
                 <y:SVGContent refid="3"/>
@@ -188,34 +189,6 @@ MIME format<y:LabelModel>
         </node>
         <node id="n1::n8">
           <data key="d6">
-            <y:ImageNode>
-              <y:Geometry height="48.0" width="48.0" x="2035.61905664" y="6.619468799999936"/>
-              <y:Fill color="#CCCCFF" transparent="false"/>
-              <y:BorderStyle color="#000000" type="line" width="1.0"/>
-              <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" hasText="false" height="4.0" horizontalTextPosition="center" iconTextGap="4" modelName="sandwich" modelPosition="s" textColor="#000000" verticalTextPosition="bottom" visible="true" width="4.0" x="22.0" y="52.0"/>
-              <y:Image alphaImage="true" refid="4"/>
-            </y:ImageNode>
-          </data>
-        </node>
-        <node id="n1::n9">
-          <data key="d4"/>
-          <data key="d6">
-            <y:UMLNoteNode>
-              <y:Geometry height="66.80199432373047" width="79.0" x="1902.5" y="48.097029911450136"/>
-              <y:Fill color="#00FF00" transparent="false"/>
-              <y:BorderStyle color="#000000" type="line" width="1.0"/>
-              <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="77.37109375" x="0.814453125" y="24.050411224365234">PIC_112.JPG<y:LabelModel>
-                  <y:SmartNodeLabelModel distance="4.0"/>
-                </y:LabelModel>
-                <y:ModelParameter>
-                  <y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/>
-                </y:ModelParameter>
-              </y:NodeLabel>
-            </y:UMLNoteNode>
-          </data>
-        </node>
-        <node id="n1::n10">
-          <data key="d6">
             <y:SVGNode>
               <y:Geometry height="60.0" width="60.0" x="1017.6511923199996" y="90.61946879999994"/>
               <y:Fill color="#CCCCFF" transparent="false"/>
@@ -224,13 +197,12 @@ MIME format<y:LabelModel>
 Receive Email</y:NodeLabel>
               <y:SVGNodeProperties usingVisualBounds="true"/>
               <y:SVGModel svgBoundsPolicy="0">
-                <y:SVGContent refid="5"/>
+                <y:SVGContent refid="4"/>
               </y:SVGModel>
             </y:SVGNode>
           </data>
         </node>
-        <node id="n1::n11">
-          <data key="d5"/>
+        <node id="n1::n9">
           <data key="d6">
             <y:ShapeNode>
               <y:Geometry height="18.701171875" width="78.033203125" x="1795.0782438775004" y="139.91829692499994"/>
@@ -244,19 +216,17 @@ Receive Email</y:NodeLabel>
       </graph>
     </node>
     <node id="n2">
-      <data key="d5"/>
       <data key="d6">
         <y:ImageNode>
           <y:Geometry height="48.0" width="48.0" x="1130.0" y="-308.9200866351807"/>
           <y:Fill color="#CCCCFF" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" hasText="false" height="4.0" horizontalTextPosition="center" iconTextGap="4" modelName="sandwich" modelPosition="s" textColor="#000000" verticalTextPosition="bottom" visible="true" width="4.0" x="22.0" y="52.0"/>
-          <y:Image alphaImage="true" refid="6"/>
+          <y:Image alphaImage="true" refid="5"/>
         </y:ImageNode>
       </data>
     </node>
     <node id="n3">
-      <data key="d5"/>
       <data key="d6">
         <y:SVGNode>
           <y:Geometry height="41.72100067138672" width="41.71900177001953" x="1026.7916914349898" y="-137.36926395756842"/>
@@ -272,7 +242,7 @@ Receive Email</y:NodeLabel>
           </y:NodeLabel>
           <y:SVGNodeProperties usingVisualBounds="true"/>
           <y:SVGModel svgBoundsPolicy="0">
-            <y:SVGContent refid="7"/>
+            <y:SVGContent refid="6"/>
           </y:SVGModel>
         </y:SVGNode>
       </data>
@@ -286,13 +256,12 @@ Receive Email</y:NodeLabel>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" hasText="false" height="4.0" horizontalTextPosition="center" iconTextGap="4" modelName="sandwich" modelPosition="s" textColor="#000000" verticalTextPosition="bottom" visible="true" width="4.0" x="14.5" y="23.0"/>
           <y:SVGNodeProperties usingVisualBounds="true"/>
           <y:SVGModel svgBoundsPolicy="0">
-            <y:SVGContent refid="8"/>
+            <y:SVGContent refid="7"/>
           </y:SVGModel>
         </y:SVGNode>
       </data>
     </node>
     <node id="n5">
-      <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="18.701171875" width="78.033203125" x="1401.8564173175" y="139.91829692499994"/>
@@ -301,6 +270,34 @@ Receive Email</y:NodeLabel>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" horizontalTextPosition="center" iconTextGap="0" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" width="78.033203125" x="0.0" y="0.0">AWS Lambda</y:NodeLabel>
           <y:Shape type="rectangle"/>
         </y:ShapeNode>
+      </data>
+    </node>
+    <node id="n6">
+      <data key="d6">
+        <y:ImageNode>
+          <y:Geometry height="48.0" width="48.0" x="1810.0948454400004" y="-273.5457779346192"/>
+          <y:Fill color="#CCCCFF" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" hasText="false" height="4.0" horizontalTextPosition="center" iconTextGap="4" modelName="sandwich" modelPosition="s" textColor="#000000" verticalTextPosition="bottom" visible="true" width="4.0" x="22.0" y="52.0"/>
+          <y:Image alphaImage="true" refid="8"/>
+        </y:ImageNode>
+      </data>
+    </node>
+    <node id="n7">
+      <data key="d4"/>
+      <data key="d6">
+        <y:UMLNoteNode>
+          <y:Geometry height="66.80199432373047" width="79.0" x="1842.0948454400004" y="-162.45025760991217"/>
+          <y:Fill color="#00FF00" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="77.37109375" x="0.814453125" y="24.050411224365234">PIC_112.JPG<y:LabelModel>
+              <y:SmartNodeLabelModel distance="4.0"/>
+            </y:LabelModel>
+            <y:ModelParameter>
+              <y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/>
+            </y:ModelParameter>
+          </y:NodeLabel>
+        </y:UMLNoteNode>
       </data>
     </node>
     <edge id="e0" source="n0" target="n3">
@@ -321,7 +318,7 @@ Receive Email</y:NodeLabel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="n1::e0" source="n1::n10" target="n1::n0">
+    <edge id="n1::e0" source="n1::n8" target="n1::n0">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -416,17 +413,17 @@ Receive Email</y:NodeLabel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="n1::e6" source="n1::n4" target="n1::n8">
+    <edge id="e1" source="n1::n4" target="n6">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
           <y:Arrows source="none" target="standard"/>
-          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="82.052734375" x="133.47985578106318" y="-55.27155852223524">updates status<y:LabelModel>
+          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="82.052734375" x="7.493437449308431" y="-343.85329089713184">updates status<y:LabelModel>
               <y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/>
             </y:LabelModel>
             <y:ModelParameter>
-              <y:SmartEdgeLabelModelParameter angle="6.283185307179586" distance="62.519807829620206" distanceToCenter="true" position="right" ratio="0.6943756438902917" segment="-1"/>
+              <y:SmartEdgeLabelModelParameter angle="6.283185307179586" distance="48.519807829620376" distanceToCenter="true" position="right" ratio="0.9006017219639776" segment="-1"/>
             </y:ModelParameter>
             <y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/>
           </y:EdgeLabel>
@@ -434,7 +431,7 @@ Receive Email</y:NodeLabel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e1" source="n0" target="n2">
+    <edge id="e2" source="n0" target="n2">
       <data key="d10">
         <y:QuadCurveEdge straightness="0.1">
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -443,8 +440,7 @@ Receive Email</y:NodeLabel>
         </y:QuadCurveEdge>
       </data>
     </edge>
-    <edge id="e2" source="n3" target="n1::n10">
-      <data key="d9"/>
+    <edge id="e3" source="n3" target="n1::n8">
       <data key="d10">
         <y:QuadCurveEdge straightness="0.1">
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="-14.119468799999936"/>
@@ -489,25 +485,7 @@ yD/EpwBuqqsoGQAAAABJRU5ErkJggg==</y:Resource>
 &lt;/svg&gt;
 </y:Resource>
       <y:Resource id="3">&lt;svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"&gt;&lt;defs&gt;&lt;style&gt;.cls-1{fill:#9d5025;}.cls-2{fill:#f58536;}.cls-3{fill:#6b3a19;}.cls-4{fill:#fbbf93;}&lt;/style&gt;&lt;/defs&gt;&lt;title&gt;Compute&lt;/title&gt;&lt;polygon class="cls-1" points="15.91 74.12 20.25 76.29 27.92 50.04 20.25 23.71 15.91 25.88 15.91 74.12"/&gt;&lt;polygon class="cls-2" points="28.65 25.71 20.25 23.74 20.25 76.29 28.65 74.32 28.65 25.71"/&gt;&lt;polygon class="cls-1" points="25.47 21.1 31.84 17.91 39.79 50.04 31.84 82.09 25.47 78.9 25.47 21.1"/&gt;&lt;polygon class="cls-2" points="44.89 77.81 31.84 81.97 31.84 17.91 44.89 22.08 44.89 77.81"/&gt;&lt;polygon class="cls-1" points="74.52 29.17 79.74 29.17 79.74 69.12 74.52 68.83 74.52 29.17"/&gt;&lt;polygon class="cls-3" points="54.27 29.75 60.13 26.73 79.33 29.17 79.9 34.28 74.64 35.02 54.27 29.75"/&gt;&lt;polygon class="cls-4" points="54.44 70.25 60.29 73.27 80.06 65.71 74.81 64.98 54.44 70.25"/&gt;&lt;polygon class="cls-1" points="55.92 61.77 66.37 63.17 66.37 36.83 55.92 38.22 55.92 61.77"/&gt;&lt;polygon class="cls-1" points="39.79 86.06 49.99 91.16 58.75 49.94 49.99 8.84 39.79 13.94 39.79 86.06"/&gt;&lt;path class="cls-2" d="M50,8.84V91.16l34.1-17.05V25.89ZM79.74,65.77,60.19,71.64V28.36l19.54,5.86Z"/&gt;&lt;polygon class="cls-2" points="66.37 36.83 66.37 63.25 77.24 50.04 66.37 36.83"/&gt;&lt;/svg&gt;</y:Resource>
-      <y:Resource id="4" type="java.awt.image.BufferedImage">iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAADvUlEQVR42u1Za4hMYRgelsgtEon8&#13;
-cSlEiX9+SEtpiXZnzjmz7UarJGpTSFJopSTkEj9shFxzzvfN7rZsbW7JRnIrRHIrhbVzvu87u2vb&#13;
-WuzxvmOWmZ3rmf1m5vyYt04z7ex3zvu81+d9j8dTkIIUJC9SXs+mqpT5NYPv0AyxWyV8k2KwRUvu&#13;
-2kNcrbhG+ApV5y2gsB330k0TQO0vrRNjE91D1dkcjbDlsT+ARbKluKq3jVIIv5ZQ8X6Xj/BvasAq&#13;
-7juPnlEMXgK/1fuI2aPq7TOiHwD/jAcVQ6yTrfzqhuBoLxWP0lX+PwizB72BwOE76/u7QtjxWNdS&#13;
-cTp86JdKeYVMAGC5BqfKJ77Y46pzn4bHcTF/E4H8NyaVJOXLZSmPXiwLdIxHABoRpZD06/89CGKu&#13;
-u/8BdNWGWnvoQADAfV/LUB7u81kh4gh44BYYu8tHgh8RTIQHzN74VYE/jEmYtBPXWigvdKIrlT9g&#13;
-zo56mJcGg4kP8C6s1069AaVui3zl2XdVF/NjrYWuSV0V3mOCq7pdlFb8E35SrvL8pY9a0+K7m7Ct&#13;
-DqzwQaFsm6p3TkjqAcrOygXQNinhwzAhIFF+OIzFn/DZDFe1P8Dnemx7UBQAgx2VCyC5wTwK5TsH&#13;
-WCnakSZA9ToPyu/DrikTwJoLrSNTVA27KJ1cyMeFvam/h6NavY+wveUNwcn4Hax4x20AoCF+SWh5&#13;
-JEohCgG9AIA81yi/CuHQ6SoQOruXPHwIf+XG0InIr9rkTccQh90MQKWiKgVnMWeFSZxLPdA+M3Xr&#13;
-D1NqF4bPu7QHj0ha7ZoKRPkBR8O2j4i37qpAcchbMsGBWiHmRXcoz1syHkb81FoA3jgTGrDzBAAo&#13;
-uZbBGCjWAvIbMLIFYE64Dw1O5Ik+vKipsQc7XzoBpYg3Yua+9vOVmS+gDFaTX+7Drg9om/B3kcRu&#13;
-5wmABWE7Rco2LTyw5Jp5VkpcCeKMwLdDUnfkJnHZsazsNisuW+M0IjajR6BKtWaJNzXlZDsNnGkx&#13;
-Lpokd9ubcVeGMqUs0DkRhp1TCZdgGV9m46rGryOypri/zpqOaz3HW4t0EpbwQxk1q2RSeYmNwTBR&#13;
-qNjlpfyBfIuHumwb5JJXQjybyzD+wI3PQlRaN83skjOzF6x+JeWOx+kLCJWIPT5q8iyXyWYkiFmL&#13;
-dVwcaYRvBA7yRKLFBeTOCfDuvJy+jMOVemhfCqw08vVOGuNfN5x5Cp8HFcNaWtJkD3PPa9GAVYxU&#13;
-G9fmmODhVWR1iH4Dc0TQ0itKQQpSkKTyB4v/q57UNDLzAAAAAElFTkSuQmCC</y:Resource>
-      <y:Resource id="5">&lt;svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"&gt;
+      <y:Resource id="4">&lt;svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"&gt;
   &lt;title&gt;Messaging&lt;/title&gt;
   &lt;g&gt;
     &lt;polygon points="31.4 21.96 14.7 48.55 31.4 75.14 44.74 71.72 45.4 25.55 31.4 21.96" fill="#876929"/&gt;
@@ -520,7 +498,7 @@ G9fmmODhVWR1iH4Dc0TQ0itKQQpSkKTyB4v/q57UNDLzAAAAAElFTkSuQmCC</y:Resource>
   &lt;/g&gt;
 &lt;/svg&gt;
 </y:Resource>
-      <y:Resource id="6" type="java.awt.image.BufferedImage">iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAG8ElEQVR42u1ZCYwTVRjGKEfQBBSB&#13;
+      <y:Resource id="5" type="java.awt.image.BufferedImage">iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAG8ElEQVR42u1ZCYwTVRjGKEfQBBSB&#13;
 uMvRbafH9u60c7Tb3Z1tt53uMTPdZUuMCWo2KxBO3bAg8QANxEgwGmM0JiCCouIFiAYSlIgYozEQ&#13;
 EVGUaIwgKhI0ZmWX8/m/bkum3Zl2WjpKDJP8afua9973vf9//zUjRlx7/sePXxBuZRPJu9m4uI7h&#13;
 pb2BuHSQak7uZ2LSu0xCeoyOC5FUKnX9VQecap5hBJCbmGjbWT/HI28dhzxsPXKDeEMcIhvjiOFF&#13;
@@ -553,7 +531,7 @@ hJqOwmarSkkfMk5gHsUnv8uu5Qk25BO4mCnmK/TaNJb04hQ6u2G6HlCoynAfs1ipB2YTkx+E3RdQ&#13
 8kDHK2/7vNiWDjwQPcHrnFBJ3l4pfoc6glnwvnCTWgrysa6vVGGD55XqXa2Xl4qLDTia2zyBnSoH&#13;
 sUJXAgRBjIZN5sJmL4K6t8L3F0C4UtfBL+1gjU248MECa+3BAayi9n/t0fn5B/ALA4Dkhx/2AAAA&#13;
 AElFTkSuQmCC</y:Resource>
-      <y:Resource id="7">&lt;?xml version="1.0" encoding="utf-8"?&gt;
+      <y:Resource id="6">&lt;?xml version="1.0" encoding="utf-8"?&gt;
 &lt;svg version="1.1"
 	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
 	 x="0px" y="0px" width="43px" height="43px" viewBox="-0.751 -0.597 43 43" enable-background="new -0.751 -0.597 43 43"
@@ -1436,7 +1414,7 @@ AElFTkSuQmCC</y:Resource>
 	c0,0.852,0.029,20.861,2.612,20.861C21.68,41.721,22.016,41.238,22.304,40.427z"/&gt;
 &lt;/svg&gt;
 </y:Resource>
-      <y:Resource id="8">&lt;svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100" viewBox="0 0 100 100"&gt;
+      <y:Resource id="7">&lt;svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100" viewBox="0 0 100 100"&gt;
   &lt;defs&gt;
     &lt;clipPath id="clip-path"&gt;
       &lt;path d="M86,58.68V77.07H22.87V58.68Z" fill="#876929"/&gt;
@@ -1472,6 +1450,24 @@ AElFTkSuQmCC</y:Resource>
   &lt;/g&gt;
 &lt;/svg&gt;
 </y:Resource>
+      <y:Resource id="8" type="java.awt.image.BufferedImage">iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAADvUlEQVR42u1Za4hMYRgelsgtEon8&#13;
+cSlEiX9+SEtpiXZnzjmz7UarJGpTSFJopSTkEj9shFxzzvfN7rZsbW7JRnIrRHIrhbVzvu87u2vb&#13;
+WuzxvmOWmZ3rmf1m5vyYt04z7ex3zvu81+d9j8dTkIIUJC9SXs+mqpT5NYPv0AyxWyV8k2KwRUvu&#13;
+2kNcrbhG+ApV5y2gsB330k0TQO0vrRNjE91D1dkcjbDlsT+ARbKluKq3jVIIv5ZQ8X6Xj/BvasAq&#13;
+7juPnlEMXgK/1fuI2aPq7TOiHwD/jAcVQ6yTrfzqhuBoLxWP0lX+PwizB72BwOE76/u7QtjxWNdS&#13;
+cTp86JdKeYVMAGC5BqfKJ77Y46pzn4bHcTF/E4H8NyaVJOXLZSmPXiwLdIxHABoRpZD06/89CGKu&#13;
+u/8BdNWGWnvoQADAfV/LUB7u81kh4gh44BYYu8tHgh8RTIQHzN74VYE/jEmYtBPXWigvdKIrlT9g&#13;
+zo56mJcGg4kP8C6s1069AaVui3zl2XdVF/NjrYWuSV0V3mOCq7pdlFb8E35SrvL8pY9a0+K7m7Ct&#13;
+DqzwQaFsm6p3TkjqAcrOygXQNinhwzAhIFF+OIzFn/DZDFe1P8Dnemx7UBQAgx2VCyC5wTwK5TsH&#13;
+WCnakSZA9ToPyu/DrikTwJoLrSNTVA27KJ1cyMeFvam/h6NavY+wveUNwcn4Hax4x20AoCF+SWh5&#13;
+JEohCgG9AIA81yi/CuHQ6SoQOruXPHwIf+XG0InIr9rkTccQh90MQKWiKgVnMWeFSZxLPdA+M3Xr&#13;
+D1NqF4bPu7QHj0ha7ZoKRPkBR8O2j4i37qpAcchbMsGBWiHmRXcoz1syHkb81FoA3jgTGrDzBAAo&#13;
+uZbBGCjWAvIbMLIFYE64Dw1O5Ik+vKipsQc7XzoBpYg3Yua+9vOVmS+gDFaTX+7Drg9om/B3kcRu&#13;
+5wmABWE7Rco2LTyw5Jp5VkpcCeKMwLdDUnfkJnHZsazsNisuW+M0IjajR6BKtWaJNzXlZDsNnGkx&#13;
+Lpokd9ubcVeGMqUs0DkRhp1TCZdgGV9m46rGryOypri/zpqOaz3HW4t0EpbwQxk1q2RSeYmNwTBR&#13;
+qNjlpfyBfIuHumwb5JJXQjybyzD+wI3PQlRaN83skjOzF6x+JeWOx+kLCJWIPT5q8iyXyWYkiFmL&#13;
+dVwcaYRvBA7yRKLFBeTOCfDuvJy+jMOVemhfCqw08vVOGuNfN5x5Cp8HFcNaWtJkD3PPa9GAVYxU&#13;
+G9fmmODhVWR1iH4Dc0TQ0itKQQpSkKTyB4v/q57UNDLzAAAAAElFTkSuQmCC</y:Resource>
     </y:Resources>
   </data>
 </graphml>
